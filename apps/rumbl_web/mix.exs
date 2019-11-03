@@ -33,6 +33,8 @@ defmodule RumblWeb.MixProject do
   defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
+  # Here `in_umbrella` allows the :rumbl application to be used as a dependency
+  # and have it start before :rumbl_web server
   #
   # Type `mix help deps` for examples and options.
   defp deps do
