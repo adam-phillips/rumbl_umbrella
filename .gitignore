@@ -21,3 +21,5 @@ erl_crash.dump
 
 # Don't commit IDE config
 rumbl_umbrella.iml
+/apps/rumbl/rumbl.iml
+/apps/rumbl_web/rumbl_web.iml
