@@ -39,8 +39,8 @@ defmodule RumblWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_rumbl_web_key",
-    signing_salt: "6IxowwLM"
+    key: "_rumbl_key",
+    signing_salt: "mLu983f4"
 
   plug RumblWeb.Router
 end

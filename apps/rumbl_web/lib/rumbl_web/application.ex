@@ -9,7 +9,8 @@ defmodule RumblWeb.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      RumblWeb.Endpoint
+      RumblWeb.Endpoint,
+      RumblWeb.Presence
       # Starts a worker by calling: RumblWeb.Worker.start_link(arg)
       # {RumblWeb.Worker, arg},
     ]
