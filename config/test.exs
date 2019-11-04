@@ -16,3 +16,7 @@ config :rumbl_web, RumblWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Reduce the rounds of hashing carried out in tests by Comeonin so password
+# hashing is faster in tests
+config :pbkdf2_elixir, :rounds, 1
