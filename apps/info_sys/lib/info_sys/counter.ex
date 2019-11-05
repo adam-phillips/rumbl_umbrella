@@ -26,6 +26,13 @@ defmodule InfoSys.Counter do
   end
 
   @doc """
+    Initialization, taking initial value as arg
+  """
+  def init(initial_val) do
+    {:ok, initial_val}
+  end
+
+  @doc """
     Handle cast for :inc or :dec to increment or decrement accordingly
   """
   def handle_cast(:inc, val) do
