@@ -23,3 +23,6 @@ erl_crash.dump
 rumbl_umbrella.iml
 /apps/rumbl/rumbl.iml
 /apps/rumbl_web/rumbl_web.iml
+
+# Do not commit file with ENV variables
+/.env

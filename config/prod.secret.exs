@@ -27,6 +27,14 @@ config :rumbl_web, RumblWeb.Endpoint,
   http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base
 
+wolfram_app_id =
+  System.get_env("WOLFRAM_APP_ID") ||
+    raise """
+      environment variable WOLFRAM_APP_ID is missing.
+    """
+
+config :info_sys, :wolfram, app_id: wolfram_app_id
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix
