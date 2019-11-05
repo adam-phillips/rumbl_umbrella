@@ -8,6 +8,8 @@ defmodule InfoSys.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      InfoSys.Cache,
+      {Task.Supervisor, name: InfoSys.TaskSupervisor}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
