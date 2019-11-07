@@ -47,9 +47,13 @@ defmodule InfoSys.Wolfram do
     Contact WolframAlpha with the query string using :httpc, part of the
     Erlang standard library. This is a straight HTTP request and it matches
     against :ok and the body that's returned to the calling client
+
+    Look up an :http_client module from the mix config and default it to the
+    :httpc module, which is available via @http module attribute
   """
+  @http Application.get_env(:info_sys, :wolfram)[:http_client] || :httpc
   defp fetch_xml(query) do
-    {:ok, {_, _, body}} = :httpc.request(String.to_charlist(url(query)))
+    {:ok, {_, _, body}} = @http.request(String.to_charlist(url(query)))
 
     body
   end
