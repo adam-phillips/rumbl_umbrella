@@ -20,3 +20,8 @@ config :logger, level: :warn
 # Reduce the rounds of hashing carried out in tests by Comeonin so password
 # hashing is faster in tests
 config :pbkdf2_elixir, :rounds, 1
+
+# Configure the http client and wolfram credentials for information system tests
+config :info_sys, :wolfram,
+  app_id: "1234",
+  http_client: InfoSys.Test.HTTPClient
